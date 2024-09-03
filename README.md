@@ -7,6 +7,10 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 
 ## Funciones:
 
+### Carteras:
+- Agregar cartera
+- Eliminar cartera
+
 ### Pagos:
 - Comprar
 - Movimiento entre cuentas
@@ -19,3 +23,10 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 ### Movimientos:
 - Ver movimientos
 
+## Tecnologias:
+- Backend: Python
+- Frontend: React
+- BD: por definir
+
+## Figma:
+[https://www.figma.com/design/7lR23trYTD9vvW6hips8Lx/Gestion_Financiera_Personal?node-id=1-77&node-type=SYMBOL&t=u4zMSisXzH9elga5-0]
