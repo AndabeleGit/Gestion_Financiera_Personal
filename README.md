@@ -8,11 +8,11 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 ## Funciones:
 
 ### Carteras:
-- Agregar cartera
-- Eliminar cartera
+- [x] Agregar cartera
+- [x] Eliminar cartera
 
 ### Pagos:
-- Comprar
+- [x] Comprar
 - Movimiento entre cuentas
 
 ### Metas:

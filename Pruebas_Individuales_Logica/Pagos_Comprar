@@ -10,7 +10,7 @@ try:
         costo = int(input("¿Cuánto costó? "))
         banco = input("¿De dónde saldrá el dinero? ")
 
-        cursor.execute("SELECT nombre, valor FROM carteras WHERE nombre = %s", (banco,))
+        cursor.execute("SELECT nombre, valor FROM carteras WHERE nombre = %s", (banco))
         registro = cursor.fetchone()
 
         if registro:
