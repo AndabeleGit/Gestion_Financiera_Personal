@@ -10,13 +10,14 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 ### Carteras:
 - [x] Agregar cartera
 - [x] Eliminar cartera
+- [ ] Modificar cartera (en el caso se sumar dinero a alguna cartera)
 
 ### Pagos:
 - [x] Comprar
-- Movimiento entre cuentas
+- [x] Movimiento entre cuentas
 
 ### Metas:
-- Agregar meta
+- [x] Agregar meta
 - Ver metas
 - Pagar meta
 
