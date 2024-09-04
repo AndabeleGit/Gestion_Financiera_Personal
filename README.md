@@ -10,7 +10,7 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 ### Carteras:
 - [x] Agregar cartera
 - [x] Eliminar cartera
-- [ ] Modificar cartera (en el caso se sumar dinero a alguna cartera)
+- [x] Sumar a cartera
 
 ### Pagos:
 - [x] Comprar
