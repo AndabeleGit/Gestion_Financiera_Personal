@@ -20,7 +20,7 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 ### Metas:
 - [x] Agregar meta
 - [x] Ver metas
-- [x] Pagar meta
+- [ ] Pagar meta
 - [ ] Borrar meta
 - [ ] Editar cartera
 
