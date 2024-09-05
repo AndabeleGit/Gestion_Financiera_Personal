@@ -25,7 +25,7 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 - [ ] Editar cartera
 
 ### Movimientos:
-- Ver movimientos
+- [ ] Ver movimientos
 
 ## Tecnologias:
 - Backend: Python
