@@ -1,6 +1,6 @@
 # Explicacion Proyecto
 
-Tener la capacidad apra poder gestionar todos los gastos que se tienen en el dia a dia, y
+Tener la capacidad para poder gestionar todos los gastos que se tienen en el dia a dia, y
 asi mismo poder saber cuanto se tiene en cada cartera, la creacion de metas con un pago de cuota 
 fija o variable, asi mismo se sabe cuanto dinero se tiene ahorrado y para que cosa se esta ahorrando; 
 poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que se tienen en el dia a dia.
@@ -11,7 +11,7 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 - [x] Agregar cartera
 - [x] Eliminar cartera
 - [x] Sumar a cartera
-- [ ] Editar cartera
+- [x] Editar cartera
 
 ### Pagos:
 - [x] Comprar
@@ -24,8 +24,8 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 - [x] Eliminar meta
 - [ ] Editar cartera
 
-### Movimientos:
-- [ ] Ver movimientos
+### Extractos
+- [ ] Ver Extractos
 
 ## Tecnologias:
 - Backend: Python
