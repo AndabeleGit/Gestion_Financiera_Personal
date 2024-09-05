@@ -11,6 +11,7 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 - [x] Agregar cartera
 - [x] Eliminar cartera
 - [x] Sumar a cartera
+- [] Editar cartera
 
 ### Pagos:
 - [x] Comprar
@@ -18,8 +19,10 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 
 ### Metas:
 - [x] Agregar meta
-- Ver metas
-- Pagar meta
+- [x] Ver metas
+- [x] Pagar meta
+- [] Borrar meta
+- [] Editar cartera
 
 ### Movimientos:
 - Ver movimientos
