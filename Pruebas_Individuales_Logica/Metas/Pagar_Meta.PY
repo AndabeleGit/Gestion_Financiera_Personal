@@ -1,3 +1,4 @@
+from datetime import datetime
 import sys
 import os
 
@@ -39,6 +40,12 @@ try:
             cursor.execute("UPDATE metas SET valor_restante = %s WHERE nombre = %s", (nuevo_valor_restante, nombre_meta))
             conexion.commit()
 
+            fecha_de_creacion = datetime.now().date()
+
+            cursor.execute("INSERT INTO Extractos (nombre, descripcion, salida_dinero, valor_movido, fecha_de_creacion) "
+                           "VALUES (%s, 'Pago de meta fija', %s, %s, %s)", (nombre_meta, nombre_banco, cuota_fija, fecha_de_creacion))
+            conexion.commit()
+
             print(f"Pago realizado de cuota fija ({cuota_fija}) a la meta {nombre_meta} de la cartera {nombre_banco}, nueva valor restante: {nuevo_valor_restante}")
             print(f"Monto en cartera: {valor}, nuevo monto: {nuevo_valor_cartera}")
 
@@ -60,11 +67,19 @@ try:
             cursor.execute("UPDATE metas SET valor_restante = %s WHERE nombre = %s", (nuevo_valor_restante, nombre_meta))
             conexion.commit()
 
+            fecha_de_creacion = datetime.now().date()
+
+            cursor.execute("INSERT INTO Extractos (nombre, descripcion, salida_dinero, valor_movido, fecha_de_creacion) "
+                           "VALUES (%s, 'Pago de meta variable', %s, %s, %s)", (nombre_meta, nombre_banco, cuota_variable, fecha_de_creacion))
+            conexion.commit()
+
             print(f"Pago realizado de cuota variable ({cuota_variable}) a la meta {nombre_meta}, nueva valor restante: {nuevo_valor_restante}")
             print(f"Monto en cartera: {valor}, nuevo monto: {nuevo_valor_cartera}")
 
         else:
             print("Opcion no valida, seleccione v/f")
+
+            
 
 except Error as e:
     print(f"Error: {e}")

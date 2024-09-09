@@ -1,3 +1,4 @@
+from datetime import datetime
 import sys
 import os
 
@@ -29,6 +30,12 @@ try:
 
         print(f"Al valor de la cartera {valor_actual} se le sumo {sumar_a_cartera}")
         print(f"El nuevo valor es {nuevo_valor}")
+
+        fecha_de_creacion = datetime.now().date()
+
+        cursor.execute("INSERT INTO Extractos (nombre, descripcion, banco_salida, banco_entrada, fecha_de_creacion)" 
+                       "Values ('Entrada dinero', 'Entrada de dinero a alguna cartera', %s, %s, %s)", (banco, sumar_a_cartera, fecha_de_creacion))
+        conexion.commit()
 
 except Error as e:  
     print(f"Error: {e}")

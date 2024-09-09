@@ -25,7 +25,8 @@ poder visualizar esos gastos hormiga para tener en cuenta los gastos minimo que 
 - [x] Editar meta
 
 ### Extractos
-- [ ] Ver Extractos
+- [x] Ver Extractos
+- [ ] Filtros Extractos
 
 ## Tecnologias:
 - Backend: Python

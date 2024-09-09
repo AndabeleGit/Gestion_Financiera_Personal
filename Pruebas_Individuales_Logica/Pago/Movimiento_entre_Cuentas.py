@@ -1,3 +1,4 @@
+from datetime import datetime
 import sys
 import os
 
@@ -40,7 +41,14 @@ try:
         cursor.execute("UPDATE carteras SET valor = %s WHERE nombre = %s", (nuevo_valor_llega_banco, llega_banco))
         
         conexion.commit()
+
+        fecha_de_creacion = datetime.now().date()
+
+        cursor.execute("INSERT INTO Extractos (nombre, descripcion, salida_dinero, entrada_dinero, valor_movido, fecha_de_creacion) "
+                       "VALUES ('Movimiento entre cuentas', 'Moviento entre cuentas', %s, %s, %s, %s)", (sale_banco, llega_banco, dinero_a_mover, fecha_de_creacion))
         
+        conexion.commit()
+
         print(f"Transferencia realizada: {dinero_a_mover} ha sido movido de '{sale_banco}' a '{llega_banco}'.")
         print(f"Nuevo saldo de '{sale_banco}': {nuevo_valor_sale_banco}")
         print(f"Nuevo saldo de '{llega_banco}': {nuevo_valor_llega_banco}")
