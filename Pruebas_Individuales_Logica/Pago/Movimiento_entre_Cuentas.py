@@ -12,8 +12,8 @@ try:
     if conexion:
         cursor = conexion.cursor()
 
-        sale_banco = input("¿De qué banco saldrá el dinero? ")
-        llega_banco = input("¿A qué banco llegará el dinero? ")
+        sale_banco = input("¿De qué banco saldrá el dinero? ").upper()
+        llega_banco = input("¿A qué banco llegará el dinero? ").upper()
         dinero_a_mover = int(input("¿Cuánto dinero va a mover? "))
 
         cursor.execute("SELECT nombre, valor FROM carteras WHERE nombre = %s", (sale_banco,))
@@ -45,7 +45,7 @@ try:
         fecha_de_creacion = datetime.now().date()
 
         cursor.execute("INSERT INTO Extractos (nombre, descripcion, salida_dinero, entrada_dinero, valor_movido, fecha_de_creacion) "
-                       "VALUES ('Movimiento entre cuentas', 'Moviento entre cuentas', %s, %s, %s, %s)", (sale_banco, llega_banco, dinero_a_mover, fecha_de_creacion))
+                       "VALUES ('MOVIMIENTO ENTRE CUENTAS', 'moviento entre cuentas', %s, %s, %s, %s)", (sale_banco, llega_banco, dinero_a_mover, fecha_de_creacion))
         
         conexion.commit()
 

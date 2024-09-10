@@ -11,7 +11,7 @@ try:
     if conexion:
         cursor = conexion.cursor()
 
-        cartera_a_borrar = input("Que cartera va a eliminar? ")
+        cartera_a_borrar = input("Que cartera va a eliminar? ").upper()
 
         cursor.execute("SELECT nombre FROM carteras WHERE nombre = %s", (cartera_a_borrar,))
         resultado = cursor.fetchone()

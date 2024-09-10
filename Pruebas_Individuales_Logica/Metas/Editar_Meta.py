@@ -20,7 +20,7 @@ try:
             for meta in metas:
                 print(f"ID: {meta[0]}, Nombre: {meta[1]}, Descripción: {meta[2]}, Valor Meta: {meta[3]}, Cuota Fija: {meta[4]}")
             
-            meta_id = input("Ingrese el ID de la meta que desea editar: ")
+            meta_id = input("Ingrese el ID de la meta que desea editar: ").upper()
 
             cursor.execute("SELECT id, nombre, descripcion, valor_meta, cuota_fija FROM metas WHERE id = %s", (meta_id,))
             meta_seleccionada = cursor.fetchone()

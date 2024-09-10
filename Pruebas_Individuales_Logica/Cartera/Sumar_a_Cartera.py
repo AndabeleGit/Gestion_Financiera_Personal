@@ -12,7 +12,7 @@ try:
     if conexion:
         cursor = conexion.cursor()
 
-        banco = input("A que banco le va a sumar dinero? ")
+        banco = input("A que banco le va a sumar dinero? ").upper()
         cursor.execute("SELECT nombre, valor FROM carteras WHERE nombre = %s", (banco,))
         resultado_banco = cursor.fetchone()
 
@@ -34,7 +34,7 @@ try:
         fecha_de_creacion = datetime.now().date()
 
         cursor.execute("INSERT INTO Extractos (nombre, descripcion, banco_salida, banco_entrada, fecha_de_creacion)" 
-                       "Values ('Entrada dinero', 'Entrada de dinero a alguna cartera', %s, %s, %s)", (banco, sumar_a_cartera, fecha_de_creacion))
+                       "Values ('ENTRADA DINERO', 'entrada de dinero a alguna cartera', %s, %s, %s)", (banco, sumar_a_cartera, fecha_de_creacion))
         conexion.commit()
 
 except Error as e:  

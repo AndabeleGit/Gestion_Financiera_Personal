@@ -11,7 +11,7 @@ try:
     if conexion:
         cursor = conexion.cursor()
 
-        meta_a_borrar = input("Que meta va a eliminar? ")
+        meta_a_borrar = input("Que meta va a eliminar? ").upper()
 
         cursor.execute("SELECT nombre FROM metas WHERE nombre = %s", (meta_a_borrar,))
         resultado = cursor.fetchone()

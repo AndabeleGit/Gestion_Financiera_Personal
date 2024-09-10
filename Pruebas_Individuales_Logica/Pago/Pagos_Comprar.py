@@ -12,7 +12,7 @@ try:
     if conexion:
         cursor = conexion.cursor()
 
-        info = input("¿Qué va a comprar? ")
+        info = input("¿Qué va a comprar? ").upper()
         costo = float(input("¿Cuánto costó? "))
         banco = input("¿De dónde saldrá el dinero? ").upper()
 
