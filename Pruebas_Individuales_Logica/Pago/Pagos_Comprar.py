@@ -40,7 +40,7 @@ try:
 
                 cursor.execute(
                     "INSERT INTO Extractos (nombre, descripcion, salida_dinero, valor_movido, fecha_de_creacion) "
-                    "VALUES (%s, 'Compra de producto', %s, %s, %s)",(info, banco, costo, fecha_de_creacion))
+                    "VALUES (%s, 'Compra', %s, %s, %s)",(info, banco, costo, fecha_de_creacion))
                 conexion.commit()
 
                 print("El valor ha sido actualizado correctamente.")

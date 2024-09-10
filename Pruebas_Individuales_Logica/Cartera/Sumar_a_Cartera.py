@@ -34,7 +34,7 @@ try:
         fecha_de_creacion = datetime.now().date()
 
         cursor.execute("INSERT INTO Extractos (nombre, descripcion, banco_salida, banco_entrada, fecha_de_creacion)" 
-                       "Values ('ENTRADA DINERO', 'entrada de dinero a alguna cartera', %s, %s, %s)", (banco, sumar_a_cartera, fecha_de_creacion))
+                       "Values ('ENTRADA', 'entrada', %s, %s, %s)", (banco, sumar_a_cartera, fecha_de_creacion))
         conexion.commit()
 
 except Error as e:  
