@@ -33,7 +33,6 @@ try:
         elif opcion == "f":
             fecha_a_buscar = input("¿Qué fecha busca? (formato YYYY-MM-DD) ").strip()
             try:
-                # Validar el formato de la fecha
                 datetime.strptime(fecha_a_buscar, '%Y-%m-%d')
                 cursor.execute("SELECT * FROM Extractos WHERE fecha_de_creacion = %s", (fecha_a_buscar,))
             except ValueError:
